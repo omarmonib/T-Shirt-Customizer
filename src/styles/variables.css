@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #00bbf0;
+    --secondary-color: #007bff;
+    --text-color: #fff;
+    --dark-text-color: #333;
+    --light-text-color: #555;
+    --button-bg: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    --button-hover-bg: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    --button-radius: 8px;
+    --background-color: rgba(0, 0, 0, 0.6);
+    --button-hover-color: rgba(0, 123, 255, 0.8);
+    --button-active-color: rgba(0, 123, 255, 0.4);
+    --button-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    --button-box-shadow-hover: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+    --font-size-large: 2.5rem;
+    --font-size-medium: 2rem;
+    --font-size-small: 1.4rem;
+    --font-size-button: 1.2rem;
+    
+    --gap-large: 2rem;
+    --gap-small: 1rem;
+    
+    --padding-medium: 0.75rem 1.5rem;
+    --padding-small: 0.6rem 1.2rem;
+    
+    --max-width-img: 400px;
+    --max-width-img-small: 320px;
+    --max-width-img-xsmall: 260px;
+    --max-width-text: 50%;
+    --max-width-image: 45%;
+}

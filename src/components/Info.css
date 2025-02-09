@@ -1,0 +1,108 @@
+.info {
+  background-color: #00204a;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.info__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 5%;
+}
+
+.info__container__content {
+  flex:1;
+  text-align: center;
+  margin: 1rem;
+  text-align: start;
+  min-width: 250px;
+  max-width: 100%;
+}
+
+.info__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20em;
+}
+
+.info__container__content h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.info__container__content p {
+  font-size: 1.3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 5px 0;
+  margin: 0;
+  text-align: start;
+}
+
+.info__container__content input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #fff;
+  color: #000;
+  transition: border 0.3s ease-in-out;
+}
+
+.info__container__content input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.info__container__content button {
+  width: 80%;
+  max-width: 200px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  background: linear-gradient(45deg, #00bbf0, #007bff);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info__container__content button:hover {
+  background: linear-gradient(45deg, #007bff, #00bbf0);
+  transform: scale(1.07);
+}
+
+.info__container__content button:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.success-message {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .info__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info__container__content {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}

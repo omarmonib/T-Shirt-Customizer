@@ -1,0 +1,122 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    box-sizing: border-box;
+    direction: rtl;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #00bbf0;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar__toggle:hover {
+    transform: scale(1.1);
+}
+
+.navbar__brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00bbf0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar__brand:hover {
+    color: #007bff;
+}
+
+.navbar__menu {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    gap: 16px;
+    margin: 0;
+    padding: 0 16px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.navbar__menu--open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 16px 0;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu a,
+.navbar__menu button {
+    padding: 8px 16px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00bbf0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar__menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar__menu a:hover,
+.navbar__menu button:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar__brand {
+        font-size: 1.1rem;
+    }
+
+    .navbar__toggle {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .navbar__menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .navbar__menu--open {
+        max-height: 300px;
+        padding: 16px 0;
+    }
+
+    .navbar__menu a,
+    .navbar__menu button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+}

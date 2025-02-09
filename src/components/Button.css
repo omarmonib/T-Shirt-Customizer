@@ -1,0 +1,33 @@
+@import "../styles/variables.css";
+
+.button {
+    padding: var(--padding-medium);
+    font-size: var(--font-size-button);
+    font-weight: bold;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: var(--button-hover-bg);
+    transform: scale(1.07);
+    box-shadow: 0px 5px 15px var(--button-active-color);
+}
+
+.button:active::after {
+    transform: scale(4);
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        padding: var(--padding-small);
+        font-size: var(--font-size-button-small);
+        margin-bottom: var(--gap-small);
+    }
+}

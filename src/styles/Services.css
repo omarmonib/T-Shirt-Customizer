@@ -1,0 +1,119 @@
+.services {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #00204a;
+    color: white;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .services p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .services__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+  }
+  
+  .service__card {
+    padding: 2rem;
+    border-radius: 50%;
+    border: 5px solid #00bbf0;
+    box-shadow: 1px 0px 20px 20px rgba(0, 0, 0, 0.1);
+    width: 270px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .service__card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #003b5c;
+  }
+  
+  .service__icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service__card h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+  }
+  
+  .service__card h2::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #00bbf0;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .service__card:hover h2::after {
+    width: 70%;
+  }
+  
+  .service__card p {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+  }
+  
+  .service__card:hover h2 {
+    color: #00bbf0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service__card:hover p {
+    color: #b1b1b1;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .service__card {
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .services__container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service__card {
+      width: 90%;
+    }
+  }
+  
