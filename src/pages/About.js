@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import "../styles/About.css";
+import styles from '../styles/About.module.css';
 import AboutImg from '../assets/about-img.png';
+import Button from '../components/Button';
 
 const About = () => {
   const [message, setMessage] = useState('');
@@ -10,36 +11,35 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="about" dir="rtl">
-      <h1>من <span>نحن؟</span></h1>
+    <section id="about" className={styles.aboutContainer}>
+      <h1 className={styles.aboutTitle}>
+        من <span className={styles.highlight}>نحن؟</span>
+      </h1>
       
-      <div className="about__content">
-        <div className="about__text">
-          <p>
-            <strong><span>نحن! </span></strong>
+      <div className={styles.aboutContent}>
+        <div className={styles.textContainer}>
+          <p className={styles.description}>
+            <strong><span className={styles.highlight}>نحن! </span></strong>
             فريق متخصص في تقديم خدمة 
             <strong> تصميم وطباعة التيشيرتات المخصصة</strong>، حيث نتيح لك الفرصة 
             <strong> لتصميم ملابسك بأسلوبك الفريد </strong> باستخدام أحدث تقنيات الطباعة وأجود الخامات.
           </p>
-          <p>
-            <strong><span>لماذا نحن؟ </span></strong>
-            لأننا نؤمن بأن <strong> لكل شخص بصمته الخاصة</strong> ، ولذلك نقدم لك الحرية الكاملة في اختيار 
+          <p className={styles.description}>
+            <strong><span className={styles.highlight}>لماذا نحن؟ </span></strong>
+            لأننا نؤمن بأن <strong> لكل شخص بصمته الخاصة</strong>، ولذلك نقدم لك الحرية الكاملة في اختيار 
             <strong>الألوان، الخطوط، والشعارات</strong> التي تعكس شخصيتك سواء كنت بحاجة 
             <strong> لتيشيرت لشركتك، مناسبة خاصة، أو تصميم فريد لك وحدك</strong>، نحن هنا لنحقق لك ذلك بأفضل جودة وأسرع وقت!
           </p>
 
-          <button 
-            className="about__button"
-            onClick={handleButtonClick}
+          <Button 
+            text="كيف يمكننا مساعدتك" 
             aria-label="تعرف على المزيد"
-          >
-            كيف يمكننا مساعدتك
-          </button>
-          
-          {message && <p>{message}</p>}
+            onClick={handleButtonClick} 
+          />
+          {message && <p className={styles.description}>{message}</p>}
         </div>
 
-        <div className="about__image">
+        <div className={styles.imageContainer}>
           <img src={AboutImg} alt="صورة توضح فريقنا في تصميم وطباعة التيشيرتات" />
         </div>
       </div>

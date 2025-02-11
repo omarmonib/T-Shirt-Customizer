@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Amiri&display=swap');
 @import url('./variables.css');
 
-.about {
+.aboutContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,13 +9,13 @@
   text-align: center;
   width: 100%;
   height: 100vh;
-  padding: 2rem;
+  padding: var(--gap-large);
   max-width: 1200px;
   margin: 0 auto;
   direction: rtl;
 }
 
-.about h1 {
+.aboutTitle {
   font-family: 'Amiri', serif;
   font-size: var(--font-size-large);
   font-weight: bold;
@@ -23,11 +23,11 @@
   color: var(--dark-text-color);
 }
 
-.about span {
+.highlight {
   color: var(--primary-color);
 }
 
-.about__content {
+.aboutContent {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -48,28 +48,28 @@
   }
 }
 
-.about__image {
+.imageContainer {
   flex: 1;
   max-width: var(--max-width-image);
   display: flex;
   justify-content: flex-end;
 }
 
-.about__image img {
+.imageContainer img {
   width: 100%;
   max-width: var(--max-width-img);
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--button-radius);
+  box-shadow: var(--button-box-shadow);
   transition: transform 0.3s ease-in-out;
   object-fit: cover;
 }
 
-.about__image img:hover {
+.imageContainer img:hover {
   transform: scale(1.05);
 }
 
-.about__text {
+.textContainer {
   flex: 1;
   font-family: 'Roboto', sans-serif;
   max-width: var(--max-width-text);
@@ -77,91 +77,53 @@
   color: var(--dark-text-color);
 }
 
-.about__text h2 {
-  font-size: var(--font-size-medium);
-  color: var(--primary-color);
-  margin-bottom: var(--gap-small);
-}
-
-.about__text p {
+.description {
   font-size: var(--font-size-small);
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.8;
   color: var(--light-text-color);
-  padding: 10px 20px;
-}
-
-.about__button {
-  padding: var(--padding-medium);
-  font-size: var(--font-size-button);
-  font-weight: bold;
-  background: var(--button-bg);
-  color: var(--text-color);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: var(--button-box-shadow);
-}
-
-.about__button:hover {
-  background: var(--button-hover-bg);
-  transform: scale(1.07);
-  box-shadow: var(--button-box-shadow-hover);
-}
-
-.about__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--primary-color);
-}
-
-.about__button:active {
-  transform: scale(0.98);
+  padding: var(--padding-small);
 }
 
 @media screen and (max-width: 768px) {
-  .about__content {
+  .aboutTitle {
+    font-size: var(--font-size-medium);
+  }
+
+  .aboutContent {
     flex-direction: column-reverse;
     text-align: center;
     gap: var(--gap-small);
   }
 
-  .about__image {
+  .imageContainer {
     order: -1;
     justify-content: center;
   }
 
-  .about__image img {
-    max-width: var(--max-width-img-small);
+  .imageContainer img {
+    display: none !important;
   }
 
-  .about__text, .about__image {
+  .textContainer {
     max-width: 100%;
     text-align: center;
+    font-size: var(--font-size-small);
   }
 
-  .about__text p {
+  .description {
     font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .about__image img {
-    max-width: var(--max-width-img-xsmall);
+  .aboutTitle {
+    font-size: var(--font-size-small);
   }
 
-  .about__text h2 {
-    font-size: 1.8rem;
-  }
-
-  .about__text p {
+  .description {
     font-size: 0.95rem;
-  }
-
-  .about__button {
-    padding: var(--padding-small);
-    font-size: 0.9rem;
   }
 }
